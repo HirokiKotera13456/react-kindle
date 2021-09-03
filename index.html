@@ -11,10 +11,36 @@
 <body>
   <div id="root"></div>
   <script type="text/babel">
+  
+    // const Box = (props) => {
+    //   return(
+    //     <h1 style={{background: props.color}}>Title is {props.title}. Color is {props.color}</h1>
+    //   )
+    // };
+
+    // ReactDOM.render(
+    //   <Box title='Hi' color="skyblue" />,
+    //   document.getElementById('root')
+    // );
+    // const {useState} = React;
+    // const Box = () => {
+    //   const[count,setCount] = useState(0);
+    //   return <h1 onClick = {() => setCount(count + 1)}>Count : {count} </h1>;
+    // }
+
+      const {useState} =React;
+      const Box = () => {
+        const[count,setCount] = useState(0);
+        return(
+          <h1 onClick = {() => setCount (count + 1)}>Count : {count} </h1>
+        )
+      }
+
     ReactDOM.render(
-      <h1>Reactで要素描画</h1>,
+      <Box />,
       document.getElementById('root')
-    );
+    )
+
   </script>
 </body>
 </html>
